@@ -14,7 +14,7 @@ VCS: https://github.com/moses-palmer/pystray
 
 Source0: %name-%version.tar
 
-Autoreq: yes, nocpp, nopython3
+Autoreq: yes, nocpp
 
 BuildRequires(pre): rpm-build-pyproject
 BuildRequires: python3-module-setuptools
@@ -32,6 +32,7 @@ BuildRequires: python3-module-setuptools
 %pyproject_install
 
 %check
+# tests are not shipped in PyPI sdist; upstream tests require GUI/X11
 true
 
 %files
