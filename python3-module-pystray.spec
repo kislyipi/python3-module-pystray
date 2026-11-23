@@ -14,8 +14,8 @@ BuildArch: noarch
 
 Source: %name-%version.tar
 
-BuildRequires(pre): rpm-macros-python3
-BuildRequires: rpm-build-python3
+BuildRequires(pre): rpm-build-pyproject
+BuildRequires: python3-module-setuptools
 
 %description
 %summary.
