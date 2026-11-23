@@ -4,23 +4,21 @@
 Name: python3-module-pystray
 Version: 0.19.5
 Release: alt1
-BuildArch: noarch
 
 Summary: Provides systray integration
 License: LGPL-3.0-or-later
 Group: Development/Python3
 Url: https://github.com/moses-palmer/pystray
 VCS: https://github.com/moses-palmer/pystray
+BuildArch: noarch
 
 Source0: %name-%version.tar
-
-Autoreq: yes, nocpp
 
 BuildRequires(pre): rpm-build-pyproject
 BuildRequires: python3-module-setuptools
 
 %description
-%summary
+%summary.
 
 %prep
 %setup
@@ -30,10 +28,6 @@ BuildRequires: python3-module-setuptools
 
 %install
 %pyproject_install
-
-%check
-# tests are not shipped in PyPI sdist; upstream tests require GUI/X11
-true
 
 %files
 %doc README.rst
