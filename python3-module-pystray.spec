@@ -12,10 +12,10 @@ Url: https://github.com/moses-palmer/pystray
 VCS: https://github.com/moses-palmer/pystray
 BuildArch: noarch
 
-Source0: %name-%version.tar
+Source: %name-%version.tar
 
-BuildRequires(pre): rpm-build-pyproject
-BuildRequires: python3-module-setuptools
+BuildRequires(pre): rpm-macros-python3
+BuildRequires: rpm-build-python3
 
 %description
 %summary.
@@ -35,5 +35,5 @@ BuildRequires: python3-module-setuptools
 %python3_sitelibdir/%{pyproject_distinfo %pypi_name}
 
 %changelog
-* Sat Nov 21 2026 Maxim Olyunin <maximilian.kislyi@gmail.com> 0.19.5-alt1
-- Initial build for ALT Linux
+* Sat Nov 21 2026 Maxim Olyunin <kislyipi@altlinux.org> 0.19.5-alt1
+- Initial build for ALT Linux.
